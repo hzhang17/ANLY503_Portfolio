@@ -1,0 +1,18 @@
+name: "ANLY503"
+navbar:
+  title: "ANLY503"
+  left:
+    - text: "Home"
+      href: about.html
+      icon: fa-home
+    - text: "geospatial"
+      icon: fa-book
+      href: geospatial.html
+    - text: "nextworks"
+      icon: fas fa-chart-line
+      href: assignment7_networks.html
+    - text: "final project"
+      icon: fas fa-chart-line
+      href: final_project_dashboard.html
+
+output_dir: "docs"

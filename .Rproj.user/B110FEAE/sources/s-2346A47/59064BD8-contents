@@ -1,0 +1,100 @@
+---
+title: "Flight Crashes Analysis"
+author: "Han Zhang"
+output: 
+    flexdashboard::flex_dashboard:
+        storyboard: true
+        social: menu
+    html_document: default
+---
+
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+#vertical_layout: scroll
+```
+
+
+### Total Onborad & Fatality Data
+
+```{r, echo=FALSE}
+knitr::include_graphics('fatal.png')
+```
+
+***
+
+We can see that the number of fatalites have a similar trend with the total number of people (crew + passenger) onboard. The fatality rate of airplane crashes is known to be one of the highest among all transportations, and this visualization verified that to some extent.
+
+
+
+### Time Factor 
+
+```{r, echo=FALSE}
+knitr::include_graphics('ts.png')
+```
+
+*** 
+
+The number of airplane crashes varies a lot in differnt years. We can see that the number of accidents after 1990s is descending as a result of improved technologies and more rigorous regulations.
+
+The number of airplane crashes are higher in fall and winter, and lower in spring and summer. The reason might be the differenece in weather conditions at the airport that affect the visibility. There are more "dangerous" weather in fall and winter, such as rain, snow or fog. 
+
+The importance of visibility and weather conditions can also be seen in the wordcloud in page "Words from Accident Summary".
+
+
+
+
+### Operators with most Crashes
+
+```{r, echo=FALSE}
+knitr::include_graphics('military.png')
+```
+
+*** 
+
+We can see that among the top 10 operators with most crashes, there are 4 of them related to military operated flights. The military tasks may caused these high numbers.
+
+From the pie chart, we know that there are much more non-military (including commercial and private) flights than military affiliated flights. So if we exclude those military flights, we can see names of major airlines come on top in the most crashes list.
+
+
+
+### Words in Accident Summary
+
+```{r, echo=FALSE}
+knitr::include_graphics('wordcloud_plane.png')
+```
+
+*** 
+
+If you are also a fan of the TV show "Air Crash Investigation", some of the frequent words in this wordcloud may seem familar to you. Some of them are related to the crash reason, like "stalled", "engine failure" and "poor weather", some of them are related to the stage of flight that most accidents happened, such as "landing" and "take off", some of them are subsequent results of the crash, for example, "fire". 
+
+
+
+
+### Crash Sites inside US
+
+```{r, echo=FALSE}
+knitr::include_url('us_crash.html')
+```
+
+*** 
+
+The route of flights may affect the distribution of the crash sites inside the US. In general, states that has more population and larger airports tend to have more crashes. States that are near or inside the ocean also tend to have more crashes than those inland. This may be a result of worse weather and wind conditions in those states.
+
+
+
+
+### Routes of Crashes inside US
+
+```{r, echo=FALSE}
+knitr::include_graphics('route.png')
+```
+
+*** 
+
+We can see among all route of flights that crashes inside the US, most of them are from or to a foreign country, so the pilots may not be very familar with English and this may cause misunderstandings when they communicate with the control tower. This may be a cause of the high number of crashes that are related to foreign countries.
+
+
+
+Also, these states with more crashes than other states show a similar trend as visualization in "Crash Sites inside US". California, New York, Texas, Florida, Illinois and Alaska maybe more dangerous than other states.
+
