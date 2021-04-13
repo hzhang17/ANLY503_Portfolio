@@ -8,9 +8,6 @@ navbar:
     - text: "geospatial"
       icon: fas fa-chart-line
       href: geospatial_1.html
-    - text: "networks"
-      icon: fas fa-chart-line
-      href: assignment7_networks.html
     - text: "final project"
       icon: fas fa-chart-line
       href: dashboard.html
